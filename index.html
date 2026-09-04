@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Reset: Evening Journal is a private reflection app with guided journaling, voice input, and optional AI reflections." />
+  <title>Reset: Evening Journal</title>
+  <style>
+    :root { color-scheme: dark; }
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; background: #0D0C0B; color: #F7F5F2; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; }
+    main { width: min(100% - 40px, 760px); margin: 0 auto; padding: 72px 0 88px; }
+    .eyebrow { color: #A39E98; font-size: .88rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+    h1 { max-width: 600px; margin: 12px 0 20px; font-size: clamp(2.3rem, 8vw, 4.6rem); letter-spacing: -.055em; line-height: 1.03; }
+    h2 { margin: 0 0 12px; font-size: 1.25rem; }
+    p, li { color: #C5C0BB; font-size: 1rem; }
+    .lede { max-width: 620px; font-size: 1.16rem; }
+    .card { margin-top: 32px; padding: 28px; border: 1px solid rgba(247,245,242,.12); border-radius: 20px; background: #171513; }
+    .review-link { display: inline-flex; margin-top: 12px; padding: 13px 18px; border-radius: 999px; background: #7C7EFB; color: #0D0C0B; font-weight: 700; text-decoration: none; }
+    .review-link:hover { background: #999BFF; }
+    ul { margin: 12px 0 0; padding-left: 22px; }
+    li + li { margin-top: 8px; }
+    .muted { color: #A39E98; font-size: .9rem; }
+    footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid rgba(247,245,242,.1); }
+    footer a { color: #A9ABFF; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">Reset: Evening Journal</p>
+    <h1>Make every night easier to process.</h1>
+    <p class="lede">Reset is a private guided journal for putting the day down. Write or speak through a short evening reflection, then choose on-device or consented cloud AI support when you want a thoughtful summary.</p>
+
+    <section class="card" aria-labelledby="review-access">
+      <h2 id="review-access">Android review access</h2>
+      <p>This time-limited internal build is provided for Google Play merchant and app reviewers. It is not a public production release and does not enable Android checkout.</p>
+      <!-- REVIEW_APK_LINK -->
+      <p class="muted">For review support, contact <a href="mailto:johnprabu0702@gmail.com?subject=Reset%20review%20access">johnprabu0702@gmail.com</a>. Do not send journal text, passwords, or payment details by email.</p>
+    </section>
+
+    <section class="card" aria-labelledby="what-reset-does">
+      <h2 id="what-reset-does">What Reset does</h2>
+      <ul>
+        <li>Guides a three-step evening reflection and saves entries privately to the signed-in account.</li>
+        <li>Supports optional voice-to-text journaling using device speech services.</li>
+        <li>Offers on-device reflection or cloud AI only after the person explicitly consents to cloud processing.</li>
+        <li>Lets people export their journal data and permanently delete their account from the app.</li>
+      </ul>
+    </section>
+
+    <footer>
+      <a href="./privacy-policy.html">Privacy Policy</a>
+      &middot; <a href="./terms-of-use.html">Terms of Use</a>
+      &middot; <a href="./support.html">Support</a>
+      &middot; <a href="./account-deletion.html">Account deletion</a>
+    </footer>
+  </main>
+</body>
+</html>
