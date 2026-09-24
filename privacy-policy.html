@@ -20,13 +20,15 @@
     .badge { display: inline-block; background: #1A1918; border: 1px solid rgba(255,255,255,0.06); border-radius: 999px; padding: 4px 14px; font-size: 0.78rem; color: #A39E98; margin-top: 6px; }
     hr { border: none; border-top: 1px solid rgba(255,255,255,0.06); margin: 40px 0; }
   </style>
+  <meta name="theme-color" content="#F7F2E8" />
+  <link rel="stylesheet" href="./site.css" />
 </head>
 <body>
   <div class="wrapper">
     <header>
       <h1>Privacy Policy</h1>
       <p>Reset: Evening Journal &middot; App by John Prabu A (<a href="mailto:johnprabu0702@gmail.com">johnprabu0702@gmail.com</a>)</p>
-      <span class="badge">Last updated: July 19, 2026</span>
+      <span class="badge">Last updated: September 25, 2026</span>
     </header>
 
     <p>This Privacy Policy explains how <strong>Reset: Evening Journal</strong> ("Reset", "we", or "us") collects, uses, discloses, and protects information when you use the mobile application.</p>
@@ -34,11 +36,12 @@
     <h2>1. Information We Collect</h2>
     <ul>
       <li><strong>Account information:</strong> an account identifier and, if you provide them, your email address, display name, and authentication-provider details. Reset may initially create an anonymous account.</li>
-      <li><strong>Journal data:</strong> journal text, mood ratings, dates, and AI-generated reflections you create. Journal data is private to your account.</li>
-      <li><strong>Voice input:</strong> Reset stores the resulting transcript as journal text, not a voice recording. Speech is processed on your device when supported. If on-device recognition is unavailable, your operating system's speech provider may process audio online under its own terms.</li>
+      <li><strong>Journal and diary data:</strong> journal text, mood ratings, dates, AI-generated reflections and drafts, photo captions, and photos you choose to save to Story Diary. Diary photos are kept in private account-owned storage.</li>
+      <li><strong>Voice:</strong> dictated journal text is saved as text. Speech recognition runs on-device when supported; otherwise, your operating system's speech provider may process it online under its own terms. Story Diary also lets you save a separate optional voice-memory recording to private account-owned storage. That recording is not sent to OpenAI.</li>
       <li><strong>Product analytics:</strong> a pseudonymous account or device identifier, app version, device and operating-system information, and explicit product events such as starting or completing an entry. We do not send journal content to analytics, and session replay and touch capture are disabled.</li>
       <li><strong>Diagnostics and support:</strong> crash details, stack traces, device and app information, and any text you intentionally submit in a bug report. Default personal-information collection, screenshots, and session replay are disabled in crash reporting.</li>
       <li><strong>Notifications:</strong> reminder settings, time zone, and a device push token when needed to deliver notifications you enable.</li>
+      <li><strong>App preferences:</strong> your appearance choice and diary emblem/ink selection are saved locally on your device. They are not uploaded or synced to your account.</li>
       <li><strong>Purchase information:</strong> product, entitlement, and subscription status supplied by Apple, Google, and RevenueCat. We do not receive or store your full payment-card details.</li>
     </ul>
 
@@ -53,13 +56,15 @@
     <p>We do not sell your personal data or journal entries. We do not use journal entries to train our own AI models.</p>
 
     <h2>3. AI Processing Choices</h2>
-    <p>Reset can generate reflections on your device or through cloud AI. On-device generation keeps journal text on the device for that generation. Before Reset first uses cloud AI, it asks for permission to send the relevant journal entry text through Reset's Supabase function to OpenAI. Audio is not sent to OpenAI. You can change AI mode later in Settings.</p>
+    <p>Reset can generate evening reflections on your device or through cloud AI. On-device generation keeps the journal text on the device for that generation. Cloud reflections send the relevant journal text through Reset's Supabase function to OpenAI only after you grant cloud-AI consent. You can change AI mode in Settings.</p>
+    <p>When you request a Story Diary draft, Reset sends the saved note and your photo captions/placement markers to OpenAI through a Supabase function. The function does not fetch or send photo pixels, and voice-memory recordings are not part of the request. The draft is optional and does not overwrite your saved page.</p>
+    <p>OpenAI says API data is not used to train its models by default. Standard abuse-monitoring logs may retain prompts and responses for up to 30 days unless an exception applies. Reset requests non-stored Chat Completions, but this does not disable provider abuse monitoring. See <a href="https://developers.openai.com/api/docs/guides/your-data" target="_blank" rel="noreferrer">OpenAI API data controls</a>.</p>
 
     <h2>4. Service Providers</h2>
     <p>We use these providers only as needed to operate Reset:</p>
     <ul>
       <li><strong>Supabase</strong> - database, authentication, and server functions. <a href="https://supabase.com/privacy" target="_blank" rel="noreferrer">Privacy Policy</a></li>
-      <li><strong>OpenAI</strong> - cloud reflection generation after permission is granted. OpenAI API data is handled under its business/API terms. <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noreferrer">Privacy Policy</a></li>
+      <li><strong>OpenAI</strong> - consented cloud reflections and Story Diary drafts made from text and captions. Reset does not send Story Diary photo pixels or saved voice-memory recordings to the draft model. OpenAI API data is handled under its business/API terms. <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noreferrer">Privacy Policy</a></li>
       <li><strong>PostHog</strong> - pseudonymous product analytics; no journal content or session replay. <a href="https://posthog.com/privacy" target="_blank" rel="noreferrer">Privacy Policy</a></li>
       <li><strong>Sentry</strong> - privacy-restricted crash reporting and user-submitted feedback. <a href="https://sentry.io/privacy/" target="_blank" rel="noreferrer">Privacy Policy</a></li>
       <li><strong>RevenueCat</strong> - purchase and entitlement management. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noreferrer">Privacy Policy</a></li>
@@ -74,7 +79,7 @@
     <p>We keep account and journal data while your account is active. When in-app account deletion completes, Reset deletes your active account identity and associated journal data. Encrypted backups may retain deleted data until normal backup rotation completes. Purchase records may remain with Apple, Google, RevenueCat, or us where required for transaction history, fraud prevention, tax, accounting, or legal obligations. Deleting your Reset account does not cancel an App Store or Play Store subscription.</p>
 
     <h2>7. Security</h2>
-    <p>Journal data is encrypted in transit using TLS and at rest by our infrastructure provider. Supabase row-level security restricts app access to records owned by the authenticated account. No method of storage or transmission is completely secure.</p>
+    <p>Connections to Reset's services use TLS. Supabase row-level security and private storage policies restrict diary records and media to the authenticated account. No method of storage or transmission is completely secure.</p>
 
     <h2>8. Your Choices and Rights</h2>
     <ul>
@@ -90,7 +95,7 @@
     <p>Reset is not directed to children under 13, and we do not knowingly collect their personal information. If you believe a child under 13 has used Reset, contact us so we can delete the account.</p>
 
     <h2>10. International Processing</h2>
-    <p>Our providers may process information outside your country, including in Singapore and the United States. Where required, we rely on contractual and other safeguards for international transfers.</p>
+    <p>Our service providers may process information in countries outside your own. Where required, we rely on contractual and other safeguards for international transfers.</p>
 
     <h2>11. Changes</h2>
     <p>We may update this policy as Reset changes. We will revise the date above and provide additional notice when required by law.</p>
