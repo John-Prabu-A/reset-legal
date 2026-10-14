@@ -1,3 +1,3 @@
-# Reset legal and support pages
+# Nila legal and support pages
 
-Public store-facing pages for Reset: Evening Journal.
+Public store-facing privacy, terms, account-deletion, and support pages for Nila: AI Journal & Diary.
