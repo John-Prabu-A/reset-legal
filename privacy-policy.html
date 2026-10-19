@@ -29,7 +29,7 @@
       <img class="brand-mark" src="./nila-app-icon.png" alt="Nila app icon" width="64" height="64" />
       <h1>Privacy Policy</h1>
       <p>Nila: AI Journal &amp; Diary &middot; App by John Prabu A (<a href="mailto:jpdevland@gmail.com">jpdevland@gmail.com</a>)</p>
-      <span class="badge">Last updated: October 14, 2026</span>
+      <span class="badge">Last updated: October 19, 2026</span>
     </header>
 
     <p>This Privacy Policy explains how <strong>Nila: AI Journal & Diary</strong> ("Nila", "we", or "us") collects, uses, discloses, and protects information when you use the mobile application.</p>
@@ -37,11 +37,11 @@
     <h2>1. Information We Collect</h2>
     <ul>
       <li><strong>Account information:</strong> an account identifier and, if you provide them, your email address, display name, and authentication-provider details. Nila may initially create an anonymous account.</li>
-      <li><strong>Journal and diary data:</strong> journal text, mood ratings, dates, AI-generated reflections and drafts, photo captions, and photos you choose to save to Story Diary. Diary photos are kept in private account-owned storage.</li>
-      <li><strong>Voice:</strong> dictated journal text is saved as text. Speech recognition runs on-device when supported; otherwise, your operating system's speech provider may process it online under its own terms. Story Diary also lets you save a separate optional voice-memory recording to private account-owned storage. That recording is not sent to OpenAI.</li>
+      <li><strong>Journal and diary data:</strong> new journal text, mood ratings, dates, reflections, drafts, photos, and captions are stored in encrypted app-private storage on your device. When you sign in to an existing account, Nila can import journal records from an earlier version. Those older server copies remain in your account until you delete the account. New entries do not sync across devices in this release, and encrypted cloud backup is not enabled.</li>
+      <li><strong>Voice:</strong> dictated journal text is saved on your device. Speech recognition runs on-device when supported; otherwise, your operating system's speech provider may process it online under its own terms. Optional voice-memory recordings are encrypted and stored locally. They are not sent to OpenAI.</li>
       <li><strong>Product analytics:</strong> a pseudonymous account or device identifier, app version, device and operating-system information, and explicit product events such as starting or completing an entry. We do not send journal content to analytics, and session replay and touch capture are disabled.</li>
       <li><strong>Diagnostics and support:</strong> crash details, stack traces, device and app information, and any text you intentionally submit in a bug report. Default personal-information collection, screenshots, and session replay are disabled in crash reporting.</li>
-      <li><strong>Notifications:</strong> reminder settings, time zone, and a device push token when needed to deliver notifications you enable.</li>
+      <li><strong>Notifications:</strong> reminder settings and time zone are stored locally. Remote push notifications are not enabled in this release.</li>
       <li><strong>App preferences:</strong> your appearance choice and diary emblem/ink selection are saved locally on your device. They are not uploaded or synced to your account.</li>
       <li><strong>Purchase information:</strong> product, entitlement, and subscription status supplied by Apple, Google, and RevenueCat. We do not receive or store your full payment-card details.</li>
     </ul>
@@ -64,12 +64,12 @@
     <h2>4. Service Providers</h2>
     <p>We use these providers only as needed to operate Nila:</p>
     <ul>
-      <li><strong>Supabase</strong> - database, authentication, and server functions. <a href="https://supabase.com/privacy" target="_blank" rel="noreferrer">Privacy Policy</a></li>
+      <li><strong>Supabase</strong> - authentication, account data, import of journal records from earlier versions, and secure processing of cloud-AI requests. <a href="https://supabase.com/privacy" target="_blank" rel="noreferrer">Privacy Policy</a></li>
       <li><strong>OpenAI</strong> - consented cloud reflections and Story Diary drafts made from text and captions. Nila does not send Story Diary photo pixels or saved voice-memory recordings to the draft model. OpenAI API data is handled under its business/API terms. <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noreferrer">Privacy Policy</a></li>
       <li><strong>PostHog</strong> - pseudonymous product analytics; no journal content or session replay. <a href="https://posthog.com/privacy" target="_blank" rel="noreferrer">Privacy Policy</a></li>
       <li><strong>Sentry</strong> - privacy-restricted crash reporting and user-submitted feedback. <a href="https://sentry.io/privacy/" target="_blank" rel="noreferrer">Privacy Policy</a></li>
       <li><strong>RevenueCat</strong> - purchase and entitlement management. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noreferrer">Privacy Policy</a></li>
-      <li><strong>Expo</strong> - app delivery and push-notification infrastructure. <a href="https://expo.dev/privacy" target="_blank" rel="noreferrer">Privacy Policy</a></li>
+      <li><strong>Expo</strong> - app delivery and updates. <a href="https://expo.dev/privacy" target="_blank" rel="noreferrer">Privacy Policy</a></li>
       <li><strong>Apple, Google, and device speech providers</strong> - store payments, app distribution, and operating-system speech recognition when used.</li>
     </ul>
 
@@ -77,10 +77,10 @@
     <p>We disclose information to the service providers above, when required by law, to protect users or the service, or as part of a business transfer subject to appropriate safeguards. We do not share journal content with other users or advertisers.</p>
 
     <h2>6. Retention and Account Deletion</h2>
-    <p>We keep account and journal data while your account is active. When in-app account deletion completes, Nila deletes your active account identity and associated journal data. Encrypted backups may retain deleted data until normal backup rotation completes. Purchase records may remain with Apple, Google, RevenueCat, or us where required for transaction history, fraud prevention, tax, accounting, or legal obligations. Deleting your Nila account does not cancel an App Store or Play Store subscription.</p>
+    <p>Account information and journal records imported from an earlier version remain in Nila's service while your account is active. New journal content is stored on the device where it is created. When in-app account deletion completes, Nila deletes the active account and associated server records and clears the local journal on the device where deletion is completed. Local copies on other devices are not remotely erased. Purchase records may remain with Apple, Google, RevenueCat, or us where required for transaction history, fraud prevention, tax, accounting, or legal obligations. Deleting your Nila account does not cancel an App Store or Play Store subscription.</p>
 
     <h2>7. Security</h2>
-    <p>Journal data is encrypted in transit using TLS and at rest by our infrastructure provider. Supabase row-level security restricts app access to records owned by the authenticated account. No method of storage or transmission is completely secure.</p>
+    <p>New journal text is held in an encrypted local database; photos and voice memories are encrypted on the device with keys protected by the operating system's secure storage. Existing account records are protected by Supabase row-level security. Cloud-AI requests use TLS. No method of storage or transmission is completely secure.</p>
 
     <h2>8. Your Choices and Rights</h2>
     <ul>
